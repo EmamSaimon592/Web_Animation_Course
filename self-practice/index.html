@@ -9,16 +9,24 @@
     .box {
       width: 100px;
       height: 100px;
-      background-color: blue;
+      background-color: #0000ff;
     }
+
   </style>
 </head>
 
 <body>
 
-  <h1>Emam Saimon</h1>
+
 
   <div class="box"></div>
+
+
+
+  <h1 class="title">Hello</h1>
+  <p class="text">Welcome</p>
+  <button class="btn">Contact</button>
+  
 
 
   <!-- <script src="./main.js"></script> -->
@@ -28,10 +36,26 @@
 
 
   <script>
-    gsap.to(".box ", {
-      x: 500,
-      duration: 2
-    });
+ 
+  const tl = gsap.timeline();
+
+  tl.from(".title", {
+    y: 100,
+    opacity: 0,
+    duration: 1
+  });
+
+  tl.from(".text", {
+    y: 50,
+    opacity: 0,
+    duration: 1
+  });
+
+  tl.from(".btn", {
+    scale: 0,
+    opacity: 0,
+    duration: 0.5
+  });
 
   </script>
 </body>
