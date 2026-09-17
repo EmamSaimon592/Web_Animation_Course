@@ -6,10 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .box {
+    .box1{
       width: 100px;
       height: 100px;
       background-color: #0000ff;
+    }
+
+    .box2{
+      width: 100px;
+      height: 100px;
+      background-color: #3cbbff;
     }
 
   </style>
@@ -19,7 +25,8 @@
 
 
 
-  <div class="box"></div>
+  <div class="box1"></div>
+  <div class="box2"></div>
 
 
 
@@ -37,25 +44,39 @@
 
   <script>
  
+  // const tl = gsap.timeline();
+
+  // tl.from(".title", {
+  //   y: 100,
+  //   opacity: 0,
+  //   duration: 1
+  // });
+
+  // tl.from(".text", {
+  //   y: 50,
+  //   opacity: 0,
+  //   duration: 1
+  // });
+
+  // tl.from(".btn", {
+  //   scale: 0,
+  //   opacity: 0,
+  //   duration: 0.5
+  // });
+
+  
   const tl = gsap.timeline();
 
-  tl.from(".title", {
-    y: 100,
-    opacity: 0,
-    duration: 1
+ tl.to(".box1", {
+    x: 300,
+    duration: 2
   });
 
-  tl.from(".text", {
-    y: 50,
-    opacity: 0,
-    duration: 1
-  });
+  tl.to(".box2", {
+    x: 300,
+    duration: 2
+  }, "<");
 
-  tl.from(".btn", {
-    scale: 0,
-    opacity: 0,
-    duration: 0.5
-  });
 
   </script>
 </body>
